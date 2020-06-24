@@ -1,0 +1,124 @@
+/* CSS reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+em, img, strong, ul, li, form, label, legend,
+caption, article, aside, figure, figcaption, footer,
+header, nav, section {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Grid main layout */
+#header-wrapper {grid-area: header;}
+#left-aside-wrapper {grid-area: left-aside;}
+#right-aside-wrapper {grid-area: right-aside;}
+#main-wrapper {grid-area: main;}
+#footer-wrapper {grid-area: footer;}
+
+#wrapper {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-areas:
+            "header     header header header header header"
+            "left-aside main   main   main   main   right-aside"
+            "footer     footer footer footer footer footer";
+}
+
+/* Header layout */
+.header-nav-wrapper {
+    background-color: rgb(51, 176, 102);
+    height: 2.5rem;
+}
+
+.header-logo-wrapper {
+    background-color: rgb(255, 255, 204);
+    height: 2.5rem;
+}
+
+.header-form-wrapper {
+    background-color: rgb(51, 176, 102);
+    height: 2.5rem;
+}
+
+/* Header */
+.header-nav-wrapper > ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-nav-wrapper > ul > li{
+    flex: 0 0 5rem;
+    list-style-type: none;
+    border-right: 1.5px solid white;
+    text-align: center;
+    line-height: 14px;
+}
+
+.header-nav-wrapper > ul > li > a {
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.header-logo-wrapper > img {
+    position: absolute;
+    top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-nav-wrapper > ul > li {
+        flex: 0 0 3.4rem;
+    }
+    .header-nav-wrapper > ul > li > a {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header-logo-wrapper > img {
+        width: 6rem;
+        top: 32px;
+    }
+}
+
+.header-form-wrapper > form {
+    display: grid;
+    grid-template-areas:
+        ". . . . . . dropdown     btn-mudar text-input btn-procurar"
+        ". . . . . . . . busca-avancada  .";
+    grid-gap: 3px;
+    padding-top: 1px;
+    grid-auto-columns: auto;
+}
+
+.header-form-wrapper > form > select {
+    grid-area: dropdown;
+    width: 80%;
+    justify-self: end;
+}
+.header-form-wrapper > form > .btn-mudar {
+    grid-area: btn-mudar;
+    width: min-content;
+}
+.header-form-wrapper > form > .btn-procurar {
+    grid-area: btn-procurar;
+    width: min-content;
+}
+.header-form-wrapper > form > input {
+    grid-area: text-input;
+    width: 80%;
+    justify-self: end;
+}
+.header-form-wrapper > form > a {
+    grid-area: busca-avancada;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+#header-wrapper > p {
+    font-size: 0.7rem;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 1px;
+}
