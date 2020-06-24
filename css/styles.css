@@ -19,9 +19,9 @@ header, nav, section {
     font-family: sans-serif;
     display: grid;
     grid-template-areas:
-            "header     header header header header header"
-            "left-aside main   main   main   main   right-aside"
-            "footer     footer footer footer footer footer";
+            "header     header header header header header header header header header header header"
+            "left-aside main   main   main   main   main   main   main   main   main   main   right-aside"
+            "footer     footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 /* Header layout */
@@ -121,4 +121,48 @@ header, nav, section {
     text-align: right;
     font-weight: bold;
     margin-top: 1px;
+}
+
+/* Left aside */
+#left-aside-wrapper div {
+    background-color: rgb(51, 176, 102);
+    color: white;
+    padding: 0.5rem;
+}
+
+#left-aside-wrapper div h1 {
+    display: inline-block;
+}
+
+#left-aside-wrapper div img {
+    width: 2rem;
+    transform: rotate(100deg);
+    position: absolute;
+}
+
+#left-aside-wrapper nav {
+    background-color: rgb(255, 255, 204);
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 0.8rem;
+}
+
+#left-aside-wrapper nav ul {
+    list-style: none;
+}
+
+#left-aside-wrapper ul li::before {
+    content: "\26AC";
+    color: limegreen;
+    display: inline-block;
+    width: 0.6rem;
+}
+
+#left-aside-wrapper ul li{
+    line-height: 1.2rem;
+}
+
+#left-aside-wrapper ul li a {
+    font-size: 0.8rem;
+    line-height: 9px;
 }
