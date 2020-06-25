@@ -22,7 +22,7 @@ form, article, aside, footer, header, section {
             "left-aside main   right-aside"
             "footer     footer footer";
     grid-auto-columns: 1fr 4fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: .8rem;
 }
 
 /* Header layout */
@@ -245,4 +245,9 @@ main > article > dl > dd {
 main > article > dl > dd::after {
     content: "\A";
     white-space: pre;
+}
+
+main > img {
+    display: block;
+    margin: auto;
 }
