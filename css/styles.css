@@ -19,9 +19,10 @@ header, nav, section {
     font-family: sans-serif;
     display: grid;
     grid-template-areas:
-            "header     header header header header header header header header header header header"
-            "left-aside main   main   main   main   main   main   main   main   main   main   right-aside"
-            "footer     footer footer footer footer footer footer footer footer footer footer footer";
+            "header     header header header header header"
+            "left-aside main   main   main   main   right-aside"
+            "footer     footer footer footer footer footer";
+    grid-auto-columns: 1fr;
 }
 
 /* Header layout */
@@ -56,7 +57,7 @@ header, nav, section {
 }
 
 .header-nav-wrapper > ul > li > a {
-    font-size: 0.8rem;
+    font-size: .8rem;
     color: white;
     text-decoration: none;
 }
@@ -71,7 +72,7 @@ header, nav, section {
         flex: 0 0 3.4rem;
     }
     .header-nav-wrapper > ul > li > a {
-        font-size: 0.6rem;
+        font-size: .6rem;
     }
 }
 
@@ -112,57 +113,62 @@ header, nav, section {
 }
 .header-form-wrapper > form > a {
     grid-area: busca-avancada;
-    font-size: 0.7rem;
+    font-size: .7rem;
     text-align: right;
 }
 
 #header-wrapper > p {
-    font-size: 0.7rem;
+    font-size: .7rem;
     text-align: right;
     font-weight: bold;
     margin-top: 1px;
 }
 
 /* Left aside */
-#left-aside-wrapper div {
-    background-color: rgb(51, 176, 102);
-    color: white;
-    padding: 0.5rem;
+#left-aside-wrapper section {
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
 }
 
-#left-aside-wrapper div h1 {
+#left-aside-wrapper section div {
+    background-color: rgb(51, 176, 102);
+    color: white;
+    padding: .5rem;
+}
+
+#left-aside-wrapper section div h1 {
     display: inline-block;
 }
 
-#left-aside-wrapper div img {
+#left-aside-wrapper section div img {
     width: 2rem;
     transform: rotate(100deg);
     position: absolute;
 }
 
-#left-aside-wrapper nav {
+#left-aside-wrapper section nav {
     background-color: rgb(255, 255, 204);
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
-    padding-left: 0.8rem;
+    padding-left: .8rem;
 }
 
-#left-aside-wrapper nav ul {
+#left-aside-wrapper section nav ul {
     list-style: none;
 }
 
-#left-aside-wrapper ul li::before {
+#left-aside-wrapper section ul li::before {
     content: "\26AC";
     color: limegreen;
     display: inline-block;
-    width: 0.6rem;
+    width: .6rem;
 }
 
-#left-aside-wrapper ul li{
+#left-aside-wrapper section ul li{
     line-height: 1.2rem;
 }
 
-#left-aside-wrapper ul li a {
-    font-size: 0.8rem;
+#left-aside-wrapper section ul li a {
+    font-size: .8rem;
     line-height: 9px;
 }
