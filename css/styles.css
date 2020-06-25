@@ -172,3 +172,21 @@ header, nav, section {
     font-size: .8rem;
     line-height: 9px;
 }
+
+@media only screen and (max-width: 600px) {
+    #left-aside-wrapper section div h1 {
+        font-size: 0.8rem;
+    }
+
+    #left-aside-wrapper section ul li a {
+        font-size: .6rem;
+    }
+
+    #left-aside-wrapper section ul li span {
+        font-size: .7rem;
+    }
+
+    #left-aside-wrapper section nav {
+        padding-left: .4rem;
+    }
+}
