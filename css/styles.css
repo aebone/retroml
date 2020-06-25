@@ -21,7 +21,7 @@ form, article, aside, footer, header, section {
             "header     header header"
             "left-aside main   right-aside"
             "footer     footer footer";
-    grid-auto-columns: 1fr 4fr 1fr;
+    grid-auto-columns: 2fr 7fr 1.5fr;
     grid-gap: .8rem;
 }
 
@@ -48,7 +48,7 @@ form, article, aside, footer, header, section {
     align-items: center;
     justify-content: flex-end;
 }
-.header-nav-wrapper > ul > li{
+.header-nav-wrapper > ul > li {
     flex: 0 0 5rem;
     list-style-type: none;
     border-right: 1.5px solid white;
@@ -125,68 +125,85 @@ form, article, aside, footer, header, section {
 }
 
 /* Left aside */
-#left-aside-wrapper section {
+aside section {
     margin-bottom: 1.5rem;
-    border: 1px solid #b9b9b9;
 }
 
-#left-aside-wrapper section div {
+aside section div {
     background-color: rgb(51, 176, 102);
     color: white;
     padding: .5rem;
 }
 
-#left-aside-wrapper section div h1 {
+aside section div h1 {
     display: inline-block;
 }
 
-#left-aside-wrapper section div img {
+aside section div img {
     width: 2rem;
     transform: rotate(100deg);
     position: absolute;
 }
 
-#left-aside-wrapper section nav {
+aside#left-aside-wrapper section nav {
     background-color: rgb(255, 255, 204);
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
     padding-left: .8rem;
 }
 
-#left-aside-wrapper section nav ul {
+aside#right-aside-wrapper section nav {
+    background-color: rgb(255, 255, 204);
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    padding-left: .6rem;
+}
+
+aside section nav ul {
     list-style: none;
 }
 
-#left-aside-wrapper section ul li::before {
+aside#left-aside-wrapper section nav ul li::before {
     content: "\26AC";
     color: limegreen;
     display: inline-block;
     width: .6rem;
 }
 
-#left-aside-wrapper section ul li{
+aside#left-aside-wrapper section ul li a {
+    font-size: .8rem;
     line-height: 1.2rem;
 }
 
-#left-aside-wrapper section ul li a {
-    font-size: .8rem;
-    line-height: 9px;
+aside#right-aside-wrapper section ul li a {
+    font-size: .7rem;
+}
+
+aside#right-aside-wrapper section:nth-child(2) img {
+    display: block;
+    margin: auto;
+}
+
+aside#right-aside-wrapper section p {
+    font-size: .6rem;
+    text-align: center;
+    padding: 2rem 0 .2rem 0;
 }
 
 @media only screen and (max-width: 600px) {
-    #left-aside-wrapper section div h1 {
+    aside section div h1 {
         font-size: 0.8rem;
     }
 
-    #left-aside-wrapper section ul li a {
+    aside section ul li a {
         font-size: .6rem;
     }
 
-    #left-aside-wrapper section ul li span {
+    aside section ul li span {
         font-size: .7rem;
     }
 
-    #left-aside-wrapper section nav {
+    aside section nav {
         padding-left: .4rem;
     }
 }
@@ -247,7 +264,7 @@ main > article > dl > dd::after {
     white-space: pre;
 }
 
-main > img {
+main > a {
     display: block;
-    margin: auto;
+    text-align: center;
 }
