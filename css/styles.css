@@ -76,13 +76,6 @@ form, article, aside, footer, header, section {
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .header-logo-wrapper > img {
-        width: 6rem;
-        top: 32px;
-    }
-}
-
 .header-form-wrapper > form {
     display: grid;
     grid-template-areas:
@@ -191,10 +184,6 @@ aside#right-aside-wrapper section p {
 }
 
 @media only screen and (max-width: 600px) {
-    aside section div h1 {
-        font-size: 0.8rem;
-    }
-
     aside section ul li a {
         font-size: .6rem;
     }
@@ -205,6 +194,12 @@ aside#right-aside-wrapper section p {
 
     aside section nav {
         padding-left: .4rem;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    aside section div h1 {
+        font-size: 0.8rem;
     }
 }
 
@@ -229,7 +224,9 @@ main > article {
 
 main > article > img {
     grid-area: image;
-    height: 7rem;
+    width: 48%;
+    height: auto;
+    align-self: center;
 }
 
 main > article > h2 {
@@ -267,4 +264,41 @@ main > article > dl > dd::after {
 main > a {
     display: block;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    main h1 {
+        font-size: .8rem;
+    }
+
+    main article h2 a,
+    main > article > dl > dd,
+    main > article > dl > dt {
+        font-size: .7rem;
+    }
+}
+
+footer {
+    text-align: center;
+}
+
+footer > p, footer > p > a {
+    margin-bottom: 1rem;
+    font-size: .8rem;
+}
+
+footer > p:last-child {
+    font-size: .7rem;
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer nav.secondary-menu {
+    margin-top: 2.5rem;
+}
+
+footer nav.secondary-menu > *{
+    font-size: .9rem;
 }
